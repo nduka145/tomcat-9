@@ -1,6 +1,5 @@
 ---
-- hosts: all
-  remote_user: centos
+- hosts: localhost
   become: yes
   roles:
     - tomcat

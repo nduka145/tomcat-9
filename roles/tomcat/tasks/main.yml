@@ -26,7 +26,7 @@
   - name: copy tomcat-users.xml to tomcat_home/conf
     copy: src=roles/tomcat/files/tomcat-users.xml dest=/tomcat/apache-tomcat-9.0.1/conf owner=tomcat group=tomcat mode=0755
 
-  - name: delete tomcat-8.0 directory if present
+  - name: delete tomcat-9.0 directory if present
     file: path=/tomcat/tomcat-9.0 state=absent
 
   - name: rename apache-tomcat to tomcat-9.0

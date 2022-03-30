@@ -35,6 +35,9 @@
   - name: change apache-tomcat-8 ownership to tomcat-9
     file: path=/tomcat owner=tomcat group=tomcat mode=0755 recurse=yes
 
+  - name: copy context file
+    copy: src=roles/tomcat/files/context.xml dest=/tomcat/tomcat-9.0/webapps/manager/META-INF owner=tomcat group=tomcat mode=0755
+
   - name: copy tomcat.service to systemd
     copy: src=roles/tomcat/files/tomcat.service dest=/etc/systemd/system owner=root group=root mode=0755
 
